@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/percentUpdate"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loading_spinner"
+        />
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/loading_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:padding="10dp"
+        android:indeterminateTint="@color/colorAccent"
+        />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:id="@+id/labelProgressStatus"
+        android:layout_below="@+id/loading_spinner"
+        android:text="Currently Processing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/labelProgressStatus"
+        android:id="@+id/progressStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <GridView
+        android:numColumns="2"
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
